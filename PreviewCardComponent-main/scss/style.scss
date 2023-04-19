@@ -1,0 +1,128 @@
+@import './_variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $bg-color;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 5% 0;
+
+    .src {
+        img {
+            border-radius: 10px 0px 0px 10px;
+        }
+    }
+
+    .responsiveSrc {
+        display: none;
+    }
+
+    .container {
+        width: 350px;
+        background-color: $card-color;
+        padding: 2rem;
+
+        .brand {
+            h3 {
+                font-family: montserrat;
+                letter-spacing: 5px;
+                color: $text-color;
+                font-size: 14px;
+
+            }
+        }
+
+        .title {
+            font-family: Fraunces;
+            margin-top: 1rem;
+            width: 85%;
+        }
+
+        .description {
+            width: 90%;
+            margin-top: 2rem;
+            font-family: montserrat;
+            color: $text-color;
+        }
+
+        .price {
+            width: 90%;
+            display: flex;
+            align-items: center;
+
+            h1 {
+                font-family: Fraunces;
+                color: $button-color;
+                margin: 2rem 0;
+            }
+
+            span {
+                color: $text-color;
+                text-decoration: line-through;
+                margin: 0 1.5rem;
+            }
+        }
+
+        .payButton {
+            button {
+                width: 90%;
+                padding: 1rem 0;
+                background-color: $button-color;
+                border: none;
+                color: $card-color;
+                font-family: montserrat;
+                font-weight: 700;
+                border-radius: 10px;
+            }
+
+            button:hover {
+                background-color: hsl(159, 27%, 26%);
+                ;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width:667px) {
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .src {
+            display: none;
+        }
+
+        .responsiveSrc {
+            display: block;
+
+            img {
+                width: 350px;
+                height: 200px;
+                border-radius: 10px 10px 0 0;
+                margin-bottom: -5px;
+            }
+        }
+
+        .container {
+            .title {
+                width: 100%;
+            }
+
+            .description {
+                width: 100%;
+
+            }
+        }
+
+    }
+}

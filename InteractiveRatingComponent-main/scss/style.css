@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: overpass;
+  color: hsl(0, 0%, 100%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(216, 12%, 8%);
+}
+
+.container {
+  background: linear-gradient(hsl(213, 19%, 19%), hsl(213, 19%, 13%));
+  max-width: 400px;
+  padding: 1.5rem;
+  border-radius: 30px;
+}
+.container .icon img {
+  padding: 0.8rem;
+  border-radius: 50%;
+  background-color: hsl(213, 19%, 22%);
+}
+.container .description p {
+  font-size: 15px;
+  width: 100%;
+  color: hsl(216, 12%, 54%);
+  font-weight: 600;
+}
+.container .ratting {
+  display: flex;
+  justify-content: space-around;
+}
+.container .ratting #one, .container .ratting #two, .container .ratting #tree, .container .ratting #four, .container .ratting #five {
+  display: none;
+}
+.container .ratting label {
+  background-color: hsl(213, 19%, 22%);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.container .ratting label:hover {
+  background-color: hsl(216, 12%, 54%);
+}
+.container .ratting input[type=radio]:checked + label {
+  background-color: hsl(25, 97%, 53%);
+}
+.container .button button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.8rem 0;
+  border-radius: 2pc;
+  background-color: hsl(25, 97%, 53%);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+}
+
+.modal {
+  max-width: 400px;
+  background: linear-gradient(hsl(213, 19%, 19%), hsl(213, 19%, 13%));
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  border-radius: 30px;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+}
+.modal figcaption {
+  margin: 1rem 0;
+  background-color: hsl(213, 19%, 22%);
+  padding: 0.5rem;
+  border-radius: 1pc;
+  color: hsl(25, 97%, 53%);
+}
+.modal figcaption span {
+  color: hsl(25, 97%, 53%);
+}
+.modal .description p {
+  color: hsl(216, 12%, 54%);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+* {
+  font-family: "Hanken Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+main .modalOne {
+  position: relative;
+  z-index: 2;
+  color: hsl(0, 0%, 100%);
+  padding: 3rem;
+  width: 300px;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-radius: 20px;
+}
+main .modalOne .title {
+  margin-top: -2rem;
+}
+main .modalOne .title h3 {
+  text-align: center;
+}
+main .modalOne .circle {
+  margin-top: 1rem;
+}
+main .modalOne .circle .content {
+  background: linear-gradient(hsl(241, 72%, 46%), hsl(256, 72%, 46%));
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+main .modalOne .circle .content h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+main .modalOne .circle .content p {
+  font-size: 10px;
+}
+main .modalOne .secondTitle {
+  margin-top: 1rem;
+  text-align: center;
+}
+main .modalOne .description {
+  text-align: center;
+  width: 110%;
+  margin: auto;
+  margin-top: 1rem;
+}
+main .modalTwo {
+  width: 300px;
+  box-shadow: hsl(241, 100%, 89%) 1px 1px 20px;
+  margin-left: -0.5rem;
+}
+main .modalTwo .title h3 {
+  text-align: start;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+main .modalTwo .card {
+  padding: 0.5rem 0;
+}
+main .modalTwo .card .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 80%;
+  margin: auto;
+}
+main .modalTwo .card .container .nameAndIcon {
+  display: flex;
+}
+main .modalTwo .card:nth-child(2) {
+  color: hsl(0, 100%, 67%);
+}
+main .modalTwo .card:nth-child(2) .container {
+  background-color: rgba(255, 87, 87, 0.1);
+}
+main .modalTwo .card:nth-child(3) {
+  color: hsl(39, 100%, 56%);
+}
+main .modalTwo .card:nth-child(3) .container {
+  background-color: rgba(255, 176, 31, 0.1);
+}
+main .modalTwo .card:nth-child(4) {
+  color: hsl(166, 100%, 37%);
+}
+main .modalTwo .card:nth-child(4) .container {
+  background-color: rgba(0, 189, 145, 0.1);
+}
+main .modalTwo .card:nth-child(5) {
+  color: hsl(234, 85%, 45%);
+}
+main .modalTwo .card:nth-child(5) .container {
+  background-color: rgba(17, 37, 212, 0.1);
+}
+main .modalTwo .button {
+  text-align: center;
+  padding: 1rem;
+}
+main .modalTwo .button .btnContinue {
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  width: 85%;
+  padding: 0.8rem;
+  border-radius: 2pc;
+  border: none;
+}
+main .modalTwo .button .btnContinue:hover {
+  background: linear-gradient(hsl(241, 72%, 46%), hsl(256, 72%, 46%));
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
+    margin-top: 6rem;
+  }
+  main .modalOne,
+  main .modalTwo {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

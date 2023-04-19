@@ -1,0 +1,61 @@
+@import './_variables.scss';
+
+body {
+    background-color: $bg-color;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    background-color: $card-color;
+    padding: 0.7rem;
+    max-width: 240px;
+    border-radius: 18px;
+    box-shadow: $text-color 1px 1px 25px;
+
+    .src {
+        text-align: center;
+
+        img {
+            border-radius: 8px;
+            width: 100%;
+            display: block;
+        }
+    }
+
+    .content {
+        text-align: center;
+        padding: 1rem;
+
+        .title {
+            h1 {
+                margin: 0;
+                font-size: 17px;
+                font-family: outfit;
+                font-weight: 700;
+                color: $title-color;
+            }
+        }
+
+        .description {
+            margin: 1rem 0;
+
+            p {
+                margin: 0;
+                font-size: 15px;
+                font-family: outfit;
+                font-weight: 400;
+                color: $text-color;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    body {
+        min-width: 375px;
+    }
+}

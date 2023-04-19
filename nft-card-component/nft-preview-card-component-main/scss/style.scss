@@ -1,0 +1,91 @@
+@import './variables';
+
+body {
+    background-color: $mainBG;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: $cardBG;
+    max-width: 300px;
+    padding: 1rem;
+    border-radius: 15px;
+    font-family: outfit;
+    box-shadow: black 1px 1px 35px;
+
+    .src {
+        img {
+            border-radius: 7.5px;
+            width: 100%;
+        }
+    }
+
+    .title {
+        h1 {
+            color: $white;
+            font-size: 20px;
+        }
+    }
+
+    .description {
+        p {
+            color: $softBlue;
+        }
+    }
+
+    .priceAndDays {
+        margin: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        min-width: 300px;
+        .etherum,.days {
+        display: flex;
+            span{
+                margin: 0 0.5rem;
+            }
+        }
+
+        .etherum{
+            color: $cyan;
+            font-weight: 600;
+        }
+        .days{
+            color: $softBlue;
+            img{
+                width: 20px;
+                height: 20px;
+            }
+            
+        }
+        
+    }
+
+    hr{
+        background-color: $line;
+        height: 1px;
+        border: none;
+    }
+    .footerCard{
+        padding: 0.5rem;
+
+        display: flex;
+        img{
+            border: 1px solid $white;
+            border-radius: 50%;
+            max-width: 30px;
+            max-height: 30px;
+        }
+        b{
+            font-weight: 400;
+            color: $softBlue;
+            margin: 8px;
+            span{
+                color: $white;
+            }
+        }
+    }
+}

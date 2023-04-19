@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+body {
+  background-color: hsl(217, 54%, 11%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: hsl(216, 50%, 16%);
+  max-width: 300px;
+  padding: 1rem;
+  border-radius: 15px;
+  font-family: outfit;
+  box-shadow: black 1px 1px 35px;
+}
+.container .src img {
+  border-radius: 7.5px;
+  width: 100%;
+}
+.container .title h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 20px;
+}
+.container .description p {
+  color: hsl(215, 51%, 70%);
+}
+.container .priceAndDays {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+}
+.container .priceAndDays .etherum, .container .priceAndDays .days {
+  display: flex;
+}
+.container .priceAndDays .etherum span, .container .priceAndDays .days span {
+  margin: 0 0.5rem;
+}
+.container .priceAndDays .etherum {
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+}
+.container .priceAndDays .days {
+  color: hsl(215, 51%, 70%);
+}
+.container .priceAndDays .days img {
+  width: 20px;
+  height: 20px;
+}
+.container hr {
+  background-color: hsl(215, 32%, 27%);
+  height: 1px;
+  border: none;
+}
+.container .footerCard {
+  padding: 0.5rem;
+  display: flex;
+}
+.container .footerCard img {
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  max-width: 30px;
+  max-height: 30px;
+}
+.container .footerCard b {
+  font-weight: 400;
+  color: hsl(215, 51%, 70%);
+  margin: 8px;
+}
+.container .footerCard b span {
+  color: hsl(0, 0%, 100%);
+}/*# sourceMappingURL=style.css.map */

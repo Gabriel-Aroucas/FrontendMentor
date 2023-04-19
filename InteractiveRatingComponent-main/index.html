@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="scss/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="js/script.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <title>Frontend Mentor | Interactive rating component</title>
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      margin: 1rem;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="icon">
+        <img src="images/icon-star.svg" alt="icon of the star on top of the avaliation box">
+      </div>
+      <div class="title">
+        <h1>
+          How did we do?
+        </h1>
+      </div>
+      <div class="description">
+        <p>
+          Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!
+        </p>
+      </div>
+      <div class="ratting">
+        <input name="rate" type="radio" value="1" id="one" cheked>
+        <label for="one">1</label>
+        <input name="rate" type="radio" value="2" id="two">
+        <label for="two">2</label>
+        <input name="rate" type="radio" value="3" id="tree">
+        <label for="tree">3</label>
+        <input name="rate" type="radio" value="4" id="four">
+        <label for="four">4</label>
+        <input name="rate" type="radio" value="5" id="five">
+        <label for="five">5</label>
+      </div>
+      <div class="button">
+        <button type="button" id="submit">Submit</button>
+      </div>
+    </div>
+
+
+
+    <div class="modal">
+      <div class="src">
+        <img src="images/illustration-thank-you.svg" alt="an image that represents the success avaliation and contains a gray smartphone with a orange card to left">
+        <figcaption>You selected <span id="rate">0</span> out of 5</figcaption>
+      </div>
+      <div class="description">
+        <h1>Thank You !</h1>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need more support,
+          don’t hesitate to get in touch!
+        </p>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Gabriel Aroucas</a>.
+    </div>
+  </footer>
+</body>
+
+</html>
