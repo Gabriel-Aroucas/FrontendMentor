@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+body {
+  background-color: hsl(225, 10%, 94%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+* {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+main .component {
+  max-width: 350px;
+  background-color: hsl(225, 100%, 98%);
+}
+main .component .src {
+  max-width: 350px;
+}
+main .component .src img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+main .component .content {
+  text-align: center;
+}
+main .component .content .title h1 {
+  font-weight: 900;
+  font-size: 20px;
+  color: hsl(223, 47%, 23%);
+}
+main .component .content .description {
+  width: 80%;
+  margin: 0 auto;
+  color: hsl(224, 23%, 55%);
+}
+main .component .content .card {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: hsl(225, 10%, 94%);
+  font-size: 16px;
+  padding: 0.7rem;
+  border-radius: 8px;
+}
+main .component .content .card .spanCard:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+}
+main .component .content .card .spanCard:nth-child(2) {
+  font-size: 11px;
+  margin: 0 1rem;
+}
+main .component .content .card .spanCard:nth-child(2) h3, main .component .content .card .spanCard:nth-child(2) p {
+  margin: 0.3rem;
+}
+main .component .content .card .spanCard:nth-child(2) h3 {
+  color: hsl(223, 47%, 23%);
+}
+main .component .content .card .spanCard:nth-child(2) p {
+  color: hsl(224, 23%, 55%);
+}
+main .component .content .card a {
+  font-size: 10px;
+}
+main .component .buttons {
+  text-align: center;
+  margin: 1rem 0;
+}
+main .component .buttons .procedToPayment button {
+  width: 80%;
+  background: linear-gradient(hsl(255, 75%, 52%), hsl(255, 82%, 47%));
+  color: hsl(225, 100%, 98%);
+  border: none;
+  padding: 0.7rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: hsl(224, 23%, 55%) 2px 2px 12px;
+}
+main .component .buttons .cancelOrder button {
+  background-color: transparent;
+  font-weight: 700;
+  border: none;
+  color: hsl(224, 23%, 55%);
+  padding: 1rem;
+}
+main .component .buttons .procedToPayment button:hover {
+  background-color: red;
+}
+
+footer .attribution {
+  font-size: 10px;
+  color: hsl(224, 23%, 55%);
+}
+footer .attribution a {
+  color: hsl(223, 47%, 23%);
+}
+
+/*# sourceMappingURL=style.css.map */

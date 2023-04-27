@@ -1,0 +1,13 @@
+main .component {
+  border: 1px solid red;
+  max-width: 350px;
+}
+main .component .src {
+  max-width: 350px;
+  border: 1px solid red;
+}
+main .component .src img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.cssclear.map */

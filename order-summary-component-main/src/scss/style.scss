@@ -1,0 +1,126 @@
+@import './variables';
+@import './mixins';
+
+body {
+    background-color: $ice-color;
+    @include flex();
+    flex-direction: column;
+}
+
+* {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+main {
+    .component {
+        max-width: 350px;
+        background-color: $icemax-color;
+
+        .src {
+            max-width: 350px;
+
+            img {
+                width: 100%;
+                border-radius: 10px 10px 0px 0px;
+            }
+        }
+
+        .content {
+            text-align: center;
+
+            .title {
+                h1 {
+                    font-weight: 900;
+                    font-size: 20px;
+                    color: $secondary-color;
+                }
+            }
+
+            .description {
+                width: 80%;
+                margin: 0 auto;
+                color: $terciary-color;
+            }
+
+            .card {
+                width: 80%;
+                @include flex;
+                justify-content: space-between;
+                margin: 0 auto;
+                background-color: $ice-color;
+                font-size: 16px;
+                padding: 0.7rem;
+                border-radius: 8px;
+
+                .spanCard:nth-child(1) {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .spanCard:nth-child(2) {
+                    font-size: 11px;
+                    margin: 0 1rem;
+
+                    h3,
+                    p {
+                        margin: 0.3rem;
+                    }
+
+                    h3 {
+                        color: $secondary-color;
+                    }
+
+                    p {
+                        color: $terciary-color;
+                    }
+                }
+
+                a {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .buttons {
+            text-align: center;
+            margin: 1rem 0;
+
+            .procedToPayment {
+                button {
+                    width: 80%;
+                    background: linear-gradient($primary-color, hsl(255, 82%, 47%));
+                    color: $icemax-color;
+                    border: none;
+                    padding: 0.7rem;
+                    border-radius: 8px;
+                    font-weight: 700;
+                    cursor: pointer;
+                    box-shadow: $terciary-color 2px 2px 12px;
+                }
+            }
+
+            .cancelOrder {
+                button {
+                    background-color: transparent;
+                    font-weight: 700;
+                    border: none;
+                    color: $terciary-color;
+                    padding: 1rem;
+                }
+            }
+        }
+
+    }
+
+}
+
+footer {
+    .attribution {
+        font-size: 10px;
+        color: $terciary-color;
+
+        a {
+            color: $secondary-color;
+        }
+    }
+}
