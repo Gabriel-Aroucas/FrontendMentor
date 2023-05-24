@@ -1,37 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name='Author' content='Gabriel Aroucas | Brazilian Web Developper'>
+  <meta name="description" content="Challenge of the website : FrontendMentor.io">
+  <meta name="keywords" content="Frontend, Mentor, web, website, calculator,challenge,years,Brazilian,Developper">
+  <meta name='theme-color' content='#000'>
+  <meta name='robots' content='index, follow'>
+  <meta name='rating' content='general'>
+  <meta propery='og:title' content='Challenge of the FrontendMentor'>
+  <meta propery='og:type' content='landingPage'>
+  <meta propery='og:description' content='FrontendMentor Challenge'>
+  <meta propery='og:url' content=' https://age-calculator-app-main-gabriel-aroucas.vercel.app'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="canonical" href='https://age-calculator-app-main-gabriel-aroucas.vercel.app'>
+  <link rel="stylesheet" href="/stylesheet/style.css">
+  <script src="js/main.js" defer></script>
   <title>Frontend Mentor | Age calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
-  Day
-  DD
+  <main>
+    <section class="userField">
 
-  Month
-  MM
+      <div class="dayField">
+        <div class="title">
+          <p>Day</p>
+        </div>
+        <div class="fieldNumber">
+          <input type="number" name="day" id="day">
+        </div>
+      </div>
 
-  Year
-  YYYY
+      <div class="monthField">
+        <div class="title">
+          <p>Month</p>
+        </div>
+        <div class="fieldNumber">
+          <input type="number" name="month" id="month">
+        </div>
+      </div>
 
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="yearField">
+        <div class="title">
+          <p>Year</p>
+        </div>
+        <div class="fieldNumber">
+          <input type="number" name="year" id="year">
+        </div>
+      </div>
+      <section class="svg">
+        <img src="/assets/images/icon-arrow.svg" alt="arrow down icon">
+      </section>
+      <section class="resultOnScreen">
+        <p id="resultYear"> <span>years</span></p>
+        <p id="resultMonth"><span>months</span></p>
+        <p id="resultDay"> <span>days</span></p>
+      </section>
+
+    </section>
+
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/Gabriel-Aroucas">Gabriel Aroucas | Web Developper</a>.
+  </footer>
 </body>
+
 </html>
