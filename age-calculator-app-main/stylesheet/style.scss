@@ -1,0 +1,172 @@
+@import './variables/variables';
+@import './variables/mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    //border: 1px solid red;
+
+}
+
+body {
+    background-color: $Offwhite;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    @include flexCenter;
+    flex-direction: column;
+
+    .container {
+        background-color: $White;
+        border-radius: 20px 20px 120px 20px;
+        padding-bottom: 3rem;
+
+    }
+
+    .userField {
+        @include flexCenter;
+        justify-content: space-between;
+        padding: 2rem 0;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid $Lightgrey;
+        span{
+            font-size: 10px;
+            text-align: center;
+            margin-left: 15px;
+            font-family: poppins,sans-serif;
+            color: $Lightred;
+            display: none;
+        }
+        p{
+            font-family: poppins,sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: $Smokeygrey;
+            font-size: 12px;
+            padding: 0 1rem;
+        }
+        input {
+            text-align: start;
+            width: 80px;
+            height:40px;
+            padding: 0.3rem;
+            margin: 0 1rem;
+            border-radius: 5px;
+            border: 1px solid $Lightgrey;
+            color: $Offblack;
+            font-family: poppins,sans-serif;
+            font-weight: 700;
+        }input:focus{
+            outline: none;
+        }::placeholder{
+            color: $Smokeygrey;
+            padding-left: 10px;
+        }
+    }
+
+    .svg{
+        text-align: center;
+        img{
+            background-color: $Purple;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            padding: 0.8rem;
+        }img:hover,img:active{
+            background-color: $Offblack;
+        }
+    }
+
+    .resultOnScreen{
+        font-size: 38px;
+        padding-left: 2rem;
+        font-family: poppins,sans-serif;
+        font-weight: 800;
+        color: $Purple;
+        span{
+            color: $Offblack;
+        }
+    }
+
+    .modal{
+        width: 100vw;
+        height: 100vh;
+        @include flexCenter;
+        position: absolute;
+        text-align: center;
+        font-family: poppins,sans-serif;
+        text-transform: capitalize;
+        display: none;
+        .box{
+            background-color: $Offblack;
+            padding: 1rem;
+            width: 500px;
+            min-width: 375px;
+            border-radius: 15px;
+            .times{
+                span{
+                    font-size: 100px;
+                    color: $Lightred;
+                }
+            }
+            h1{
+                
+                font-size: 3rem;
+                color: $Offwhite;
+                margin-top: -50px;
+            }
+            p{
+                font-size: 1rem;
+                color: $Lightgrey;
+            }
+            button{
+                margin-top: 10px;
+                padding: 1rem 2rem;
+                border-radius: 5px;
+                border: none;
+                font-weight: 800;
+                background-color: $Lightred;
+                color: $Offwhite;
+                }
+                button:hover{
+                    background-color: $Offwhite;
+                    color:$Lightred;
+                }
+                button:active{
+                    border: 1px solid $Lightgrey;
+                }
+        }
+    }
+}
+@media only screen and (min-width:500px){
+    main{
+        .container{
+            width: 500px;
+
+            .userField{
+                justify-content: flex-start;
+            }
+        }
+        .userField{
+            width: 470px;
+        }
+        .svg{
+            text-align: end;
+            padding-right: 2rem;
+
+            img{
+                width: 55px;
+                height: 55px;
+            }
+            
+        }
+        .resultOnScreen{
+            margin-top: -30px;
+            font-size: 68px;
+            line-height: 70px;
+        }
+    }
+}

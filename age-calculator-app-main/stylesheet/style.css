@@ -1,1 +1,168 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 94%);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .container {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px 20px 120px 20px;
+  padding-bottom: 3rem;
+}
+main .userField {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+}
+main .userField span {
+  font-size: 10px;
+  text-align: center;
+  margin-left: 15px;
+  font-family: poppins, sans-serif;
+  color: hsl(0, 100%, 67%);
+  display: none;
+}
+main .userField p {
+  font-family: poppins, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: hsl(0, 1%, 44%);
+  font-size: 12px;
+  padding: 0 1rem;
+}
+main .userField input {
+  text-align: start;
+  width: 80px;
+  height: 40px;
+  padding: 0.3rem;
+  margin: 0 1rem;
+  border-radius: 5px;
+  border: 1px solid hsl(0, 0%, 86%);
+  color: hsl(0, 0%, 8%);
+  font-family: poppins, sans-serif;
+  font-weight: 700;
+}
+main .userField input:focus {
+  outline: none;
+}
+main .userField ::-moz-placeholder {
+  color: hsl(0, 1%, 44%);
+  padding-left: 10px;
+}
+main .userField ::placeholder {
+  color: hsl(0, 1%, 44%);
+  padding-left: 10px;
+}
+main .svg {
+  text-align: center;
+}
+main .svg img {
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  padding: 0.8rem;
+}
+main .svg img:hover, main .svg img:active {
+  background-color: hsl(0, 0%, 8%);
+}
+main .resultOnScreen {
+  font-size: 38px;
+  padding-left: 2rem;
+  font-family: poppins, sans-serif;
+  font-weight: 800;
+  color: hsl(259, 100%, 65%);
+}
+main .resultOnScreen span {
+  color: hsl(0, 0%, 8%);
+}
+main .modal {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  font-family: poppins, sans-serif;
+  text-transform: capitalize;
+  display: none;
+}
+main .modal .box {
+  background-color: hsl(0, 0%, 8%);
+  padding: 1rem;
+  width: 500px;
+  min-width: 375px;
+  border-radius: 15px;
+}
+main .modal .box .times span {
+  font-size: 100px;
+  color: hsl(0, 100%, 67%);
+}
+main .modal .box h1 {
+  font-size: 3rem;
+  color: hsl(0, 0%, 94%);
+  margin-top: -50px;
+}
+main .modal .box p {
+  font-size: 1rem;
+  color: hsl(0, 0%, 86%);
+}
+main .modal .box button {
+  margin-top: 10px;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  font-weight: 800;
+  background-color: hsl(0, 100%, 67%);
+  color: hsl(0, 0%, 94%);
+}
+main .modal .box button:hover {
+  background-color: hsl(0, 0%, 94%);
+  color: hsl(0, 100%, 67%);
+}
+main .modal .box button:active {
+  border: 1px solid hsl(0, 0%, 86%);
+}
+
+@media only screen and (min-width: 500px) {
+  main .container {
+    width: 500px;
+  }
+  main .container .userField {
+    justify-content: flex-start;
+  }
+  main .userField {
+    width: 470px;
+  }
+  main .svg {
+    text-align: end;
+    padding-right: 2rem;
+  }
+  main .svg img {
+    width: 55px;
+    height: 55px;
+  }
+  main .resultOnScreen {
+    margin-top: -30px;
+    font-size: 68px;
+    line-height: 70px;
+  }
+}/*# sourceMappingURL=style.css.map */
