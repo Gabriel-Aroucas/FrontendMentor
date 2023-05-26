@@ -93,6 +93,9 @@ main .resultOnScreen {
 main .resultOnScreen span {
   color: hsl(0, 0%, 8%);
 }
+main .resultOnScreen #resultYear, main .resultOnScreen #resultMonth, main .resultOnScreen #resultDay {
+  color: hsl(259, 100%, 65%);
+}
 main .modal {
   width: 100vw;
   height: 100vh;

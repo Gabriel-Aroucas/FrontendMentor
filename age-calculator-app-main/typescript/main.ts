@@ -26,7 +26,6 @@ const localDate = new Date();
 
 
 const start = () => {
-console.log(inputMonth.value + ' - ' + `${12}`)
 	//case any fields is empty
 	if (inputDay.value.length == 0 && inputMonth.value.length == 0 && inputYear.value.length == 0) {
 		modalError('Fileds is empty', 'Please, fill in the inputs correctely');
@@ -39,9 +38,9 @@ console.log(inputMonth.value + ' - ' + `${12}`)
 		fieldRequired();
 
 	}// else if (inputMonth.value > `${9+3}` ) {
-		//modalError('Invalid Month', 'Please, insert a date between 0 and 12')
-		//fieldRequired();
-	 else if (inputYear.value > `${2022}`) {
+	//modalError('Invalid Month', 'Please, insert a date between 0 and 12')
+	//fieldRequired();
+	else if (inputYear.value > `${2022}`) {
 
 		modalError('Invalid Year', 'Please, insert a date before 2023')
 	} else if (inputYear.value.length < 4) {
@@ -50,19 +49,41 @@ console.log(inputMonth.value + ' - ' + `${12}`)
 	} else if (inputYear.value === '') {
 		modalError('Year is Empty', 'Please, insert a valid year number')
 	} else {
+
+		let actualDate: any = localDate.getDate();
+		let actualMonth: any = localDate.getMonth();
 		let actualYear: any = localDate.getFullYear();
 
+		let yourYear = actualYear - parseInt(inputYear.value);
+		let yourMonths = actualMonth - parseInt(inputMonth.value);
+		let yourDays = actualDate - parseInt(inputMonth.value);
 
-		let resutYearOf = `${parseInt(actualYear) - parseInt(inputYear.value)}`
-		let convertMonthInDays = `${parseInt(inputMonth.value) * 30}`;
 
-		let TotalDays = `${parseInt(resutYearOf) * 365 + parseInt(inputDay.value) + parseInt(convertMonthInDays)}  `;
-		let TotalYears = `${parseInt(TotalDays) / 365}`;
-		let totalMonths = `${parseInt(TotalDays) / 30}`;
+		resultDay.innerHTML = `${yourDays}`;
+		resultYear.innerHTML = `${yourYear}`;
+		resultMonth.innerHTML = `${yourMonths}`;
 
-		resultDay.innerHTML = TotalDays;
-		resultYear.innerHTML = `${parseInt(TotalYears)}`;
-		resultMonth.innerHTML = `${parseInt(totalMonths)}`;
+
+
+
+
+
+
+
+		//let actualYear: any = localDate.getFullYear();
+		//
+		//
+		//let resutYearOf:any = `${parseFloat(actualYear) - parseFloat(inputYear.value)}`
+		//console.log(resutYearOf)
+		//let convertMonthInDays = `${parseInt(inputMonth.value) * 30}`;
+		//
+		//let TotalDays = `${parseInt(resutYearOf) * 365 }  `;
+		//let TotalYears = `${parseInt(TotalDays) / 365}`;
+		//let totalMonths = `${parseInt(TotalDays) / 30}`;
+		//
+		//resultDay.innerHTML = TotalDays;
+		//resultYear.innerHTML = `${parseInt(TotalYears)}`;
+		//resultMonth.innerHTML = `${parseInt(totalMonths)}`;
 
 
 	}

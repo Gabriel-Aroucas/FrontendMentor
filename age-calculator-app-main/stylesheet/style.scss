@@ -89,6 +89,9 @@ main {
         span{
             color: $Offblack;
         }
+        #resultYear,#resultMonth,#resultDay{
+            color: $Purple;
+        }
     }
 
     .modal{

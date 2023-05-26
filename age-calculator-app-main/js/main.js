@@ -23,48 +23,59 @@ const start = () => {
         modalError('Fileds is empty', 'Please, fill in the inputs correctely');
         fieldRequired();
     }
-    //block days minor of 0 and gratter than 31
-    else if (inputDay.value <= `${0}` || inputDay.value >= `${32}`) {
+    else if (inputDay.value <= `${0}`) {
         modalError('Invalid date', 'Please, insert a date between 0 and 31');
+        fieldRequired();
     }
-    else if (inputMonth.value > `${localDate.getFullYear()}`) {
-        //block years gratter of local Year
+    else if (inputDay.value >= `${31}`) {
+        modalError('Invalid date', 'Please, insert a date between 0 and 31');
+        fieldRequired();
+    } // else if (inputMonth.value > `${9+3}` ) {
+    //modalError('Invalid Month', 'Please, insert a date between 0 and 12')
+    //fieldRequired();
+    else if (inputYear.value > `${2022}`) {
+        modalError('Invalid Year', 'Please, insert a date before 2023');
     }
-    else if (inputMonth.value <= '0' || inputMonth.value >= '12') {
-        //modal
-        //lightred
-        //block month minor of 0 and gratter than 12
+    else if (inputYear.value.length < 4) {
+        modalError('Invalid Year', 'Please, input a valid date format : YYYY');
     }
-    else if (localDate.getMonth() % 2 == 0) {
-        //par
-        //30 dias
-        //define which a months of years that contains 30 or 31 days
+    else if (inputYear.value === '') {
+        modalError('Year is Empty', 'Please, insert a valid year number');
     }
     else {
-        //impar
-        //31dias
-        //define which a months of years that contains 30 or 31 days
+        let actualDate = localDate.getDate();
+        let actualMonth = localDate.getMonth();
+        let actualYear = localDate.getFullYear();
+        let yourYear = actualYear - parseFloat(inputYear.value);
+        let yourMonths = actualMonth - parseInt(inputMonth.value);
+        let yourDays = actualDate - parseInt(inputMonth.value);
+        resultDay.innerHTML = `${yourDays}`;
+        resultYear.innerHTML = `${yourYear}`;
+        resultMonth.innerHTML = `${yourMonths}`;
+        //let actualYear: any = localDate.getFullYear();
+        //
+        //
+        //let resutYearOf:any = `${parseFloat(actualYear) - parseFloat(inputYear.value)}`
+        //console.log(resutYearOf)
+        //let convertMonthInDays = `${parseInt(inputMonth.value) * 30}`;
+        //
+        //let TotalDays = `${parseInt(resutYearOf) * 365 }  `;
+        //let TotalYears = `${parseInt(TotalDays) / 365}`;
+        //let totalMonths = `${parseInt(TotalDays) / 30}`;
+        //
+        //resultDay.innerHTML = TotalDays;
+        //resultYear.innerHTML = `${parseInt(TotalYears)}`;
+        //resultMonth.innerHTML = `${parseInt(totalMonths)}`;
     }
+    //	let dayValue:any = inputDay.value;
+    //	if(dayValue %2 ==0){
+    //		alert('30 dias')
+    //	}
 };
 const modalError = (title, description) => {
     modal.style.display = 'flex';
     modalTitle.innerHTML = title;
     modalDescription.innerHTML = description;
-};
-const modalDateError = () => {
-    modal.style.display = 'flex';
-    modalTitle.innerHTML = 'Invalid Date';
-    modalDescription.innerHTML = 'Please, insert a date between 0 and 31';
-};
-const modalMonthError = () => {
-    modal.style.display = 'flex';
-    modalTitle.innerHTML = 'Invalid Month';
-    modalDescription.innerHTML = 'Please, insert a date between 0 and 12';
-};
-const modalYearError = () => {
-    modal.style.display = 'flex';
-    modalTitle.innerHTML = 'Invalid Year';
-    modalDescription.innerHTML = `Please, insert a date grater than ${localDate.getFullYear()})`;
 };
 confirmationModal.addEventListener('click', () => {
     modal.style.display = 'none';

@@ -23,70 +23,71 @@
 
 <body>
   <main>
-      <div class="container">
-        <section class="userField">
-          <div class="dayField">
-            <div class="title">
-              <p id="textDay">Day</p>
-            </div>
+    <div class="container">
+      <section class="userField">
+        <div class="dayField">
+          <div class="title">
+            <p id="textDay">Day</p>
+          </div>
+          <form action="#">
             <div class="fieldNumber">
-              <input type="number" name="day" id="day" placeholder="DD"/>
+              <input type="number" name="day" id="day" placeholder="DD" required />
             </div>
             <span id="dayFieldRequired">This field is required</span>
-          </div>
-
-          <div class="monthField">
-            <div class="title">
-              <p id="textMonth">Month</p>
-            </div>
-            <div class="fieldNumber">
-              <input type="number" name="month" id="month" placeholder="MM">
-            </div>
-            <span id="monthFieldRequired">This field is required</span>
-
-          </div>
-
-          <div class="yearField">
-            <div class="title">
-              <p id="textYear">Year</p>
-            </div>
-            <div class="yearFieldNumber">
-              <input type="number" name="year" id="year" placeholder="YYYY">
-            </div>
-            <span id="yearFieldRequired">This field is required</span>
-
-          </div>
-        </section>
-
-
-        <section class="svg">
-          <img src="assets/images/icon-arrow.svg" width="45px" height="45px" alt="arrow down icon" onclick="start()">
-        </section>
-
-        <section class="resultOnScreen">
-          <p id="resultYear">--<span>years</span></p>
-          <p id="resultMonth">--<span>months</span></p>
-          <p id="resultDay">--<span>days</span></p>
-        </section>
-      </div>
-
-      <section class="modal">
-        <div class="box">
-          <div class="times">
-            <span>&times;</span>
-          </div>
-          <div class="title">
-            <h1 id="modalTitle">modalTitle</h1>
-          </div>
-          <div class="description">
-            <p id="modalDescription">modalDescription</p>
-          </div>
-          <div class="buttons">
-            <button type="button" id="confirmationModal">ok</button>
-          </div>
         </div>
 
+        <div class="monthField">
+          <div class="title">
+            <p id="textMonth">Month</p>
+          </div>
+          <div class="fieldNumber">
+            <input type="number" name="month" id="month" placeholder="MM" required>
+          </div>
+          <span id="monthFieldRequired">This field is required</span>
+        </div>
+
+        <div class="yearField">
+          <div class="title">
+            <p id="textYear">Year</p>
+          </div>
+          <div class="yearFieldNumber">
+            <input type="number" name="year" id="year" placeholder="YYYY" required>
+          </div>
+          <span id="yearFieldRequired">This field is required</span>
+        </div>
+        </form>
+
       </section>
+
+
+      <section class="svg">
+        <img src="assets/images/icon-arrow.svg" width="45px" height="45px" alt="arrow down icon" onclick="start()">
+      </section>
+
+      <section class="resultOnScreen">
+        <p> <span id="resultYear">--</span><span> years</span></p>
+        <p><span id="resultMonth">--</span><span> months</span></p>
+        <p>  <span id="resultDay">--</span><span> days</span></p>
+      </section>
+    </div>
+
+    <section class="modal">
+      <div class="box">
+        <div class="times">
+          <span>&times;</span>
+        </div>
+        <div class="title">
+          <h1 id="modalTitle">modalTitle</h1>
+        </div>
+        <div class="description">
+          <p id="modalDescription">modalDescription</p>
+        </div>
+        <div class="buttons">
+          <button type="button" id="confirmationModal">ok</button>
+        </div>
+      </div>
+
+    </section>
 
   </main>
 
