@@ -26,7 +26,7 @@ const localDate = new Date();
 
 
 const start = () => {
-	//case any fields is empty
+	
 	if (inputDay.value.length == 0 && inputMonth.value.length == 0 && inputYear.value.length == 0) {
 		modalError('Fileds is empty', 'Please, fill in the inputs correctely');
 		fieldRequired();
@@ -37,9 +37,7 @@ const start = () => {
 		modalError('Invalid date', 'Please, insert a date between 0 and 31');
 		fieldRequired();
 
-	}// else if (inputMonth.value > `${9+3}` ) {
-	//modalError('Invalid Month', 'Please, insert a date between 0 and 12')
-	//fieldRequired();
+	}
 	else if (inputYear.value > `${2022}`) {
 
 		modalError('Invalid Year', 'Please, insert a date before 2023')
@@ -58,41 +56,18 @@ const start = () => {
 		let yourMonths = actualMonth - parseInt(inputMonth.value);
 		let yourDays = actualDate - parseInt(inputMonth.value);
 
+		if (yourMonths < 0) {
+			yourYear--
+			let reajustMonth = actualDate - parseInt(inputMonth.value) + 1;
+			yourDays = actualDate - parseInt(inputDay.value);
+			yourMonths = reajustMonth / 2;
+		}
 
 		resultDay.innerHTML = `${yourDays}`;
 		resultYear.innerHTML = `${yourYear}`;
 		resultMonth.innerHTML = `${yourMonths}`;
 
-
-
-
-
-
-
-
-		//let actualYear: any = localDate.getFullYear();
-		//
-		//
-		//let resutYearOf:any = `${parseFloat(actualYear) - parseFloat(inputYear.value)}`
-		//console.log(resutYearOf)
-		//let convertMonthInDays = `${parseInt(inputMonth.value) * 30}`;
-		//
-		//let TotalDays = `${parseInt(resutYearOf) * 365 }  `;
-		//let TotalYears = `${parseInt(TotalDays) / 365}`;
-		//let totalMonths = `${parseInt(TotalDays) / 30}`;
-		//
-		//resultDay.innerHTML = TotalDays;
-		//resultYear.innerHTML = `${parseInt(TotalYears)}`;
-		//resultMonth.innerHTML = `${parseInt(totalMonths)}`;
-
-
 	}
-
-	//	let dayValue:any = inputDay.value;
-	//	if(dayValue %2 ==0){
-	//		alert('30 dias')
-	//	}
-
 }
 
 

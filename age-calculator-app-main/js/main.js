@@ -46,26 +46,18 @@ const start = () => {
         let actualDate = localDate.getDate();
         let actualMonth = localDate.getMonth();
         let actualYear = localDate.getFullYear();
-        let yourYear = actualYear - parseFloat(inputYear.value);
+        let yourYear = actualYear - parseInt(inputYear.value);
         let yourMonths = actualMonth - parseInt(inputMonth.value);
         let yourDays = actualDate - parseInt(inputMonth.value);
+        if (yourMonths < 0) {
+            yourYear--;
+            let reajustMonth = actualDate - parseInt(inputMonth.value) + 1;
+            yourDays = actualDate - parseInt(inputDay.value);
+            yourMonths = reajustMonth / 2;
+        }
         resultDay.innerHTML = `${yourDays}`;
         resultYear.innerHTML = `${yourYear}`;
         resultMonth.innerHTML = `${yourMonths}`;
-        //let actualYear: any = localDate.getFullYear();
-        //
-        //
-        //let resutYearOf:any = `${parseFloat(actualYear) - parseFloat(inputYear.value)}`
-        //console.log(resutYearOf)
-        //let convertMonthInDays = `${parseInt(inputMonth.value) * 30}`;
-        //
-        //let TotalDays = `${parseInt(resutYearOf) * 365 }  `;
-        //let TotalYears = `${parseInt(TotalDays) / 365}`;
-        //let totalMonths = `${parseInt(TotalDays) / 30}`;
-        //
-        //resultDay.innerHTML = TotalDays;
-        //resultYear.innerHTML = `${parseInt(TotalYears)}`;
-        //resultMonth.innerHTML = `${parseInt(totalMonths)}`;
     }
     //	let dayValue:any = inputDay.value;
     //	if(dayValue %2 ==0){
