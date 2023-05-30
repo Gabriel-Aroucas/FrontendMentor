@@ -53,19 +53,20 @@ const start = () => {
 		let actualYear: any = localDate.getFullYear();
 
 		let yourYear = actualYear - parseInt(inputYear.value);
-		let yourMonths = actualMonth - parseInt(inputMonth.value);
+		let yourMonths:any = actualMonth - parseInt(inputMonth.value);
 		let yourDays = actualDate - parseInt(inputMonth.value);
 
 		if (yourMonths < 0) {
 			yourYear--
-			let reajustMonth = actualDate - parseInt(inputMonth.value) + 1;
+			let reajustMonth:any = actualDate - parseInt(inputMonth.value)-0.5;
 			yourDays = actualDate - parseInt(inputDay.value);
-			yourMonths = reajustMonth / 2;
+			yourMonths = parseInt(reajustMonth) / 2;
+
 		}
 
 		resultDay.innerHTML = `${yourDays}`;
 		resultYear.innerHTML = `${yourYear}`;
-		resultMonth.innerHTML = `${yourMonths}`;
+		resultMonth.innerHTML = `${parseInt(yourMonths)}`;
 
 	}
 }
